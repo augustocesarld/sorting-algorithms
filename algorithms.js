@@ -12,7 +12,7 @@ function generateObject (name, object) {
         verified: false,
 
         toString: function () {
-            return `${this.name}'s time: ${this.time}ms (${this.verified? 'Verificado' : 'Possui Erros'})`
+            return `${this.name}'s time: ${this.time}ms (${this.verified? 'Verified' : 'Has Some Errors'})`
         }
     }
 }
