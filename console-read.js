@@ -7,9 +7,9 @@ const params = {
 }
 
 function readParams () {
-    params.size = parseInt(readLine.question('Type how many numbers: '))
-    params.min_value = parseFloat(readLine.question('Type the minimun value: '))
-    params.max_value = parseFloat(readLine.question('Type the maximum value: '))
+    params.size = parseInt(readLine.question('> Type how many numbers: '))
+    params.min_value = parseFloat(readLine.question('> Type the minimun value: '))
+    params.max_value = parseFloat(readLine.question('> Type the maximum value: '))
     return params
 }
 
