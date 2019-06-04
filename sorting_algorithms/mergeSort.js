@@ -3,29 +3,34 @@
 */
 
 function merge (array, start, middle, end) {
-    let indexA = start, indexB = middle + 1
+    let indexA = start
+    let indexB = middle + 1
+    
     let size = end - start + 1
     let aux = []
 
     for (let i = 0; i < size; i++) {
-        if ((indexA <= middle) && (indexB <= end))
-            if (array[indexA] <= array[indexB])
+        if ((indexA <= middle) && (indexB <= end)) {
+            if (array[indexA] <= array[indexB]) {
                 aux[i] = array[indexA++]
-            else
+            } else {
                 aux[i] = array[indexB++]
-        else if (indexA > middle)
+            }
+        } else if (indexA > middle) {
             aux[i] = array[indexB++]
-        else
+        } else {
             aux[i] = array[indexA++]
+        }
     }
 
-    for (let i = 0; i < size; i++)
+    for (let i = 0; i < size; i++) {
         array[start + i] = aux[i]
+    }
 }
 
 function mergeSort (array, start, end) {
     if (start < end) {
-        let middle = (start + end) / 2
+        let middle = parseInt((start + end) / 2)
         mergeSort(array, start, middle)
         mergeSort(array, middle+1, end)
         merge(array, start, middle, end)
