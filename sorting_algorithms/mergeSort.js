@@ -10,17 +10,15 @@ function merge (array, start, middle, end) {
     let aux = []
 
     for (let i = 0; i < size; i++) {
-        if ((indexA <= middle) && (indexB <= end)) {
-            if (array[indexA] <= array[indexB]) {
+        if ((indexA <= middle) && (indexB <= end))
+            if (array[indexA] <= array[indexB])
                 aux[i] = array[indexA++]
-            } else {
+            else
                 aux[i] = array[indexB++]
-            }
-        } else if (indexA > middle) {
+        else if (indexA > middle)
             aux[i] = array[indexB++]
-        } else {
+        else
             aux[i] = array[indexA++]
-        }
     }
 
     for (let i = 0; i < size; i++) {
