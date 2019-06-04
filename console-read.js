@@ -1,16 +1,15 @@
 const readLine = require('readline-sync')
 
-const params = {
-    size : 10,
-    min_value : 0,
-    max_value : 100
-}
-
 function readParams () {
-    params.size = parseInt(readLine.question('> Type how many numbers: '))
-    params.min_value = parseFloat(readLine.question('> Type the minimun value: '))
-    params.max_value = parseFloat(readLine.question('> Type the maximum value: '))
-    return params
+    let size = parseInt(readLine.question('> Type how many numbers: '))
+    let min_value = parseFloat(readLine.question('> Type the minimun value: '))
+    let max_value = parseFloat(readLine.question('> Type the maximum value: '))
+    
+    return {
+        size,
+        min_value,
+        max_value
+    }
 }
 
 module.exports = {readParams}

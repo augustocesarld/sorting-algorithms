@@ -1,23 +1,18 @@
 const consoleRead = require('./console-read')
+const params = consoleRead.readParams()
+
 const numbers = require('./numbers')
-const verifier = require('./verifier')
-const algorithmsController = require('./algorithms')
+const array = numbers.generateNumbers(params.size, params.min_value, params.max_value)
 
-let params = consoleRead.readParams()
-let array = numbers.generateNumbers(params.size, params.min_value, params.max_value)
-let algorithms = algorithmsController.getAlgorithms()
+const benchmarking = require('./benchmarking')
+const results = benchmarking.getResults(array)
 
-console.log('Original array:', array.join(', '))
-console.log('Results')
-
-for (let i = 0; i < algorithms.length; i++) {
-    let start = new Date().getTime()
-    let ordered = algorithms[i].object.sort(array)
-    let end = new Date().getTime()
-
-    algorithms[i].time = end - start
-    algorithms[i].verified = verifier.verifyArray(ordered)
-    console.log(algorithms[i].toString())
-}
+//Output
+console.log()
+console.log('Original array:', results[0].original_array.join(', '))
+console.log('Ordered array:', results[0].ordered_array.join(', '))
+console.log()
+console.log('RESULTS:')
+results.forEach(result => console.log(result.toString()))
 
 process.exit();
