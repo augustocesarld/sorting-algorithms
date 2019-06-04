@@ -5,7 +5,9 @@ Added until now:
 - Insertion Sort
 - Selection Sort
 - Bubble Sort
+- Shell Sort
 - Quick Sort
+- Merge Sort
 
 The goal it's just to practise NodeJS commands and revise the better know sort algorithms.
 
