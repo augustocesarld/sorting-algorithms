@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Algorithms</title>
+
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/page.css">
+
+</head>
+
+<body><center>
+    <br>
+    <h1>Sorting Algorithms Comparator</h1>
+    <br><br>
+
+    <label>Minimum Value:</label>
+    <input id="minValue" type="number">
+    &nbsp;&nbsp;
+
+    <label>Maximum Value: </label>
+    <input id="maxValue" type="number">
+    &nbsp;&nbsp;
+    
+    <label>Size: </label>
+    <input id="size" type="number">
+    <br><br>
+
+    <button onclick='loadChart()'>Run</button> 
+    <br><br>
+    <div id="spinner" class="spinner"></div>
+    
+    <br><br><br>
+
+    <div id="graphic" class="graphic">
+        <canvas id='result'></canvas>
+    </div>
+
+    <br><br><br>
+    
+    <script src="js/spinner.js"></script>
+    <script src="js/chartLibrary.js"></script>
+    <script src="js/chartMounting.js"></script>
+
+</body></center>
