@@ -2,7 +2,7 @@
     Base code: https://www.geeksforgeeks.org/insertion-sort/
 */
 
-function sort (array, crescent = true) {
+function sort (array) {
     let ordered_array = [...array]
     let size = ordered_array.length
     
